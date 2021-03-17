@@ -85,7 +85,7 @@ header li {
   min-height: 300px;
   max-width: 225px;
   width: 90%;
-  height: 40vh;
+  height: 40%;
   margin: 5px;
   padding: 5px;
   display: grid;
@@ -115,6 +115,8 @@ header li {
 footer {
   background-color: rgb(209, 206, 206); 
   color: rgb(75, 75, 75);
+  position: fixed;
+  bottom: 0;
   text-align: center;
   width: 100%;
   padding-bottom: 5px;
