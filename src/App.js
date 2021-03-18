@@ -20,7 +20,7 @@ function App() {
       </header>
       {/*---*/}
       {/*Products*/}
-      <div className="content">
+      <div className="container">
         <div className="products">
           {products.map((prod) => (
             <div className="product">
