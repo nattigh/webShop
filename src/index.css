@@ -4,7 +4,7 @@ html {
 
 body {
   /* background-color: rgb(236, 223, 208); */
-  color: #137bb3;
+  /* color: #137bb3; */
   font-family: arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -21,22 +21,21 @@ body {
 
 /*Button*/
 button {
-  background: #f3f0f1;
-  width: 50%;
-  height: 5vh;
-  margin-bottom: 25px;
+  background: #999999;
+  width: fit-content;
+  height: auto;
   border-radius: 32px;
   text-align: center;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
   box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
     inset 8px 8px 16px rgba(0, 0, 0, 0.1);
-  color: #79e3b6;
+  color: #272727;
 }
 
 button:hover {
   opacity: 1;
-  box-shadow: -4px -4px 8px rgba(255, 255, 255, 0.8),
+  box-shadow: -4px -4px 8px rgba(255, 255, 255, 0.3),
     6px 6px 10px rgba(0, 0, 0, 0.2);
 }
 /*----*/
@@ -76,7 +75,7 @@ header li {
 }
 
 .product {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(245, 245, 245);
   font-family: Arial, Helvetica, sans-serif;
   display: grid;
   text-align: center;
