@@ -20,7 +20,7 @@ body {
 }
 
 /*Button*/
-button {
+menu {
   background: #999999;
   width: fit-content;
   height: auto;
@@ -33,7 +33,7 @@ button {
   color: #272727;
 }
 
-button:hover {
+menu:hover {
   opacity: 1;
   box-shadow: -4px -4px 8px rgba(255, 255, 255, 0.3),
     6px 6px 10px rgba(0, 0, 0, 0.2);
