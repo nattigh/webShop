@@ -27,6 +27,11 @@ function App() {
         <Route path="/bag">
           <ShoppingBag />
         </Route>
+        <Route path="*">
+          {/*nem letezo link kezelese itt  <div className="container">
+              "Page not found!"
+            </div>*/}
+        </Route>
       </Router>
       <Footer />
     </>

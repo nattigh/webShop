@@ -5,7 +5,7 @@ export const productList = [
     colour: "Navy",
     category: "Top",
     sex: "M",
-    sizeStock: { S: 16, M: 25, L: 23, XL: 18 },
+    sizeStock: { S: 16, M: 25, L: 23, XL: 0 },
     image:
       "https://www.rankandstyle.com/media/lists/m/mens-long-sleeve-t-shirts_L57UNBj.jpg",
     price: 25,
@@ -18,7 +18,7 @@ export const productList = [
     colour: "Black",
     category: "Top",
     sex: "M",
-    sizeStock: { S: 24, M: 37, L: 43, XL: 29 },
+    sizeStock: { S: 0, M: 0, L: 3, XL: 2 },
     image: "https://sc04.alicdn.com/kf/HTB1KJmtKFXXXXX.XXXXq6xXFXXXn.jpg",
     price: 23,
     description:
@@ -30,7 +30,7 @@ export const productList = [
     colour: "Burgundy",
     category: "Top",
     sex: "W",
-    sizeStock: { XS: 23, S: 35, M: 35, L: 21 },
+    sizeStock: { XS: 23, S: 35, M: 35, L: 0 },
     image: "https://www.bellacanvas.com/bella/product/large/8852_3.jpg",
     price: 29.99,
     description:
@@ -42,7 +42,7 @@ export const productList = [
     colour: "Khaki",
     category: "Top",
     sex: "W",
-    sizeStock: { XS: 13, S: 21, M: 20, L: 11 },
+    sizeStock: { XS: 0, S: 21, M: 20, L: 11 },
     image:
       "https://cdn.shopify.com/s/files/1/0326/7729/8316/products/olive2_900x.jpg?v=1591744438",
     price: 33,
@@ -55,7 +55,7 @@ export const productList = [
     colour: "Black",
     category: "Trouser",
     sex: "M",
-    sizeStock: { 30: 15, 32: 23, 34: 24, 36: 16 },
+    sizeStock: { 30: 15, 32: 23, 34: 24, 36: 0 },
     image:
       "https://images-na.ssl-images-amazon.com/images/I/61Y-mg8DaUL._UX466_.jpg",
     price: 30,
@@ -68,7 +68,7 @@ export const productList = [
     colour: "Navy",
     category: "Trouser",
     sex: "W",
-    sizeStock: { 28: 14, 30: 22, 32: 21, 34: 12 },
+    sizeStock: { 28: 0, 30: 22, 32: 21, 34: 12 },
     image:
       "https://cdn.shopify.com/s/files/1/1444/4012/products/TR0004_NAVY_CHECK_TP0001_WHITE_BL0001_NAVY_CHECK22120.jpg?v=1547864648",
     price: 35,
