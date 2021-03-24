@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./index.css";
 import Header from "./Header";
 import Products from "./Products";
@@ -10,29 +10,19 @@ import Footer from "./Footer";
 function App() {
   return (
     <>
-      <Router>
-        <Header />
-        <Route exact path="/">
-          <Products />
-        </Route>
+      {" "}
+      <Header />
+      <div className="container">
+        <Routes>
+          <Route exact path="/" element={<Products />} />
 
-        <Route path="/list/:sex">
-          <Products />
-        </Route>
+          <Route path="/list/:sex" element={<Products />} />
 
-        <Route path="/detail/:id">
-          <ProductDetail />
-        </Route>
+          <Route path="/detail/:id" element={<ProductDetail />} />
 
-        <Route path="/bag">
-          <ShoppingBag />
-        </Route>
-        <Route path="*">
-          {/*nem letezo link kezelese itt  <div className="container">
-              "Page not found!"
-            </div>*/}
-        </Route>
-      </Router>
+          <Route path="/bag" element={<ShoppingBag />} />
+        </Routes>
+      </div>
       <Footer />
     </>
   );

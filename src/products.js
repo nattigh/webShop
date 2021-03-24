@@ -22,19 +22,17 @@ function Products() {
   }, [sex]);
 
   return (
-    <div className="container">
-      <section className="products">
-        {items.map((prod) => (
-          <Link to={`/detail/${prod.id}`} key={prod.id}>
-            <article className="product">
-              <img className="productImg" src={prod.image} alt={prod.name} />
-              <p>{prod.name}</p>
-              <p>{`${prod.price} £`}</p>
-            </article>
-          </Link>
-        ))}
-      </section>
-    </div>
+    <section className="products">
+      {items.map((prod) => (
+        <Link to={`/detail/${prod.id}`} key={prod.id}>
+          <article className="product">
+            <img className="productImg" src={prod.image} alt={prod.name} />
+            <p>{prod.name}</p>
+            <p>{`${prod.price} £`}</p>
+          </article>
+        </Link>
+      ))}
+    </section>
   );
 }
 
