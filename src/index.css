@@ -19,27 +19,6 @@ body {
   margin: 0;
 }
 
-/*Menu -- unused*/
-menu {
-  background: #999999;
-  width: fit-content;
-  height: auto;
-  border-radius: 32px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
-  box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
-    inset 8px 8px 16px rgba(0, 0, 0, 0.1);
-  color: #272727;
-}
-
-menu:hover {
-  opacity: 1;
-  box-shadow: -4px -4px 8px rgba(255, 255, 255, 0.3),
-    6px 6px 10px rgba(0, 0, 0, 0.2);
-}
-/*----*/
-
 /*Header*/
 header {
   background-color: rgb(40, 40, 40);
@@ -82,7 +61,7 @@ header li {
   max-width: 225px;
   width: 90%;
   min-height: 250px;
-  height: 20vh;
+  height: 300px;
   margin: 5px;
   padding: 5px;
   grid-template-rows: 80% 8% 8%;
@@ -164,8 +143,8 @@ input:hover + span {
 input:checked + span {
   background: rgb(201, 200, 200);
 }
-/*noStockHover*/
 
+/*noStockHover*/
 .hide {
   display: none;
   position: absolute;
@@ -180,6 +159,31 @@ input:checked + span {
 }
 /*--noStockHover--*/
 /*--sizelist--*/
+
+/*Button*/
+button {
+  background-color: rgb(55, 55, 55);
+  color: rgb(190, 190, 190);
+  border: 2px solid rgb(190, 190, 190);
+  border-radius: 10%;
+  padding: 16px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(190, 190, 190);
+  color: rgb(55, 55, 55);
+}
+.selectSizeWarning {
+  color: red;
+}
+
+/*----*/
 /*--detail---*/
 
 /*Footer*/

@@ -8,13 +8,16 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <Link to="/list/mens">Men</Link>
+            <Link to="/">SHOP</Link>
           </li>
           <li>
-            <Link to="/list/womens">Women</Link>
+            <Link to="/list/mens">MEN</Link>
           </li>
           <li>
-            <Link to="/bag">Bag</Link>
+            <Link to="/list/womens">WOMEN</Link>
+          </li>
+          <li>
+            <Link to="/bag">BAG</Link>
           </li>
         </ul>
       </nav>

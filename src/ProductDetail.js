@@ -2,16 +2,25 @@ import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { productList } from "./data";
 
-export default function ProductDetail() {
+export default function ProductDetail(props) {
   const { id } = useParams();
   const navigate = useNavigate();
+  const [selected, setSelected] = useState(null);
 
-  const found = productList.find(
+  const item = productList.find(
     (prodID) => prodID.id === Number.parseInt(id, 10)
   );
 
-  const [item, setItem] = useState(found);
-  const [selected, setSelected] = useState(null);
+  const addToBagButton = () => {
+    if (selected) {
+      props.addItemToBag(id, selected);
+      navigate("/bag");
+    } else {
+      const element = document.getElementById("sizeSelect");
+      element.hidden = false;
+    }
+  };
+
   return (
     <section className="detail">
       <article>
@@ -31,7 +40,11 @@ export default function ProductDetail() {
                     type="radio"
                     value={size}
                     name="size"
-                    onClick={() => setSelected(size)}
+                    onClick={(e) => {
+                      setSelected(size);
+                      const element = document.getElementById("sizeSelect");
+                      element.hidden = true;
+                    }}
                   />
                   <span className="sizeBox">{size} </span>
                 </>
@@ -48,10 +61,21 @@ export default function ProductDetail() {
         </div>
 
         <p>{item.price} £</p>
-        <button onClick={() => navigate("/bag")}>
-          {/* {console.log(selected)} */}
-          Add to BAG
-        </button>
+        <div>
+          <button
+            onClick={
+              addToBagButton
+              /*App.js :<Route path="/detail/:id"
+            element={<ProductDetail addItemToBag={addItemToBag} />}/> */
+            }
+          >
+            {/* {console.log(selected)} */}
+            ADD TO BAG
+          </button>
+          <div id="sizeSelect" className="selectSizeWarning" hidden={true}>
+            SELECT SIZE
+          </div>
+        </div>
         <p>{item.description}</p>
       </article>
     </section>
