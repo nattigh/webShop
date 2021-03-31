@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import "./index.css";
-import Header from "./Header";
-import Products from "./Products";
-import ProductDetail from "./ProductDetail";
-import ShoppingBag from "./ShoppingBag";
-import Footer from "./Footer";
+import "./css/index.css";
+import Checkout from "./components/Checkout";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import ProductDetail from "./components/ProductDetail";
+import Products from "./components/Products";
+import ShoppingBag from "./components/ShoppingBag";
 
 function App() {
   const [bag, setBag] = useState([]);
@@ -67,6 +68,7 @@ function App() {
             path="/bag"
             element={<ShoppingBag bag={bag} update={updateQuantity} />}
           />
+          <Route path="/checkout" element={<Checkout bag={bag} />} />
         </Routes>
       </div>
       <Footer />

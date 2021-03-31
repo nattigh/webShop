@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { productList } from "./data";
+import { productList } from "../data";
+import "../css/detail.css";
 
 export default function ProductDetail(props) {
   const { id } = useParams();
@@ -31,12 +32,13 @@ export default function ProductDetail(props) {
         <h2>{item.colour}</h2>
         <div className="sizes">
           {Object.keys(item.sizeStock).map((size) => (
-            <label key={size}>
+            <label className="labelDetail" key={size}>
               {/*ha mar checked es rakattintok akkor lgyen unchecked */}
 
               {item.sizeStock[size] ? (
                 <>
                   <input
+                    className="radioInput"
                     type="radio"
                     value={size}
                     name="size"
@@ -60,9 +62,10 @@ export default function ProductDetail(props) {
           ))}
         </div>
 
-        <p>{item.price} £</p>
+        <p>Price: {item.price} £</p>
         <div>
           <button
+            className="detailButton"
             onClick={
               addToBagButton
               /*App.js :<Route path="/detail/:id"
@@ -76,7 +79,7 @@ export default function ProductDetail(props) {
             SELECT SIZE
           </div>
         </div>
-        <p>{item.description}</p>
+        <p style={{ textTransform: "none" }}>{item.description}</p>
       </article>
     </section>
   );

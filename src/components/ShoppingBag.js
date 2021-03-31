@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { productList } from "./data";
-import "./bag.css";
+import { useNavigate } from "react-router-dom";
+import { productList } from "../data";
+import "../css/bag.css";
 function ShoppingBag({ bag, update }) {
   const [subtotal, setSubtotal] = useState(0);
   /*
@@ -12,11 +13,10 @@ function ShoppingBag({ bag, update }) {
       element={<ShoppingBag bag={bag} update={updateQuantity} />}
     />;
 */
-
   //console.log(products);
   //const products = itemsInBag.bag.map((i) => console.log(productList[i.id]));
-
   /*---------------------- */
+  const navigate = useNavigate();
   useEffect(() => {
     let subTotal = 0;
     bag.forEach((item) => {
@@ -26,7 +26,7 @@ function ShoppingBag({ bag, update }) {
     });
     setSubtotal(subTotal);
   }, [bag]);
-
+  //kiprobalni : const numItems = bag.reduce((counter,item)=>counter+item.quantity);
   function renderItem(itemInCart) {
     const { id, size, quantity } = itemInCart;
     const { price, name, colour, image } = productList.find(
@@ -37,7 +37,7 @@ function ShoppingBag({ bag, update }) {
       <div key={`${id}+${size}`}>
         <section>
           <article className="item">
-            <img src={image} alt={name} />
+            <img className="imgBag" src={image} alt={name} />
             <div>
               <h3>{name}</h3>
               <p>{colour}</p>
@@ -77,8 +77,14 @@ function ShoppingBag({ bag, update }) {
       {/*list each element from bag:{id,size,quantity} */}
       {bag.map(renderItem)}
       {/* console.log(bag) */}
-      <p>SUBTOTAL: {subtotal} £</p>
-      <button style={{ padding: "10px 50px" }}>CHECKOUT</button>
+      <p>SUBTOTAL: {subtotal.toFixed(2)} £</p>
+      <button
+        className="detailButton"
+        style={{ padding: "10px 50px" }}
+        onClick={() => navigate("/checkout")}
+      >
+        PROCEED TO CHECKOUT
+      </button>
     </div>
   );
 }
