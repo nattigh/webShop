@@ -71,12 +71,14 @@ function Checkout({ bag }) {
           email: Yup.string()
             .email("Invalid email address")
             .required("Required"),
-          country: Yup.string()
-            .matches(COUNTRY_CITY, "Invalid country")
-            .required("Required"),
-          city: Yup.string()
-            .matches(COUNTRY_CITY, "Invalid city")
-            .required("Required"),
+          /*--COUNTRY_CITY VALIDATION--*/
+          // country: Yup.object().required("Please select a country"),
+          country: Yup.string().required("Required"),
+
+          // city: Yup.string()
+          //   .matches(COUNTRY_CITY, "Invalid city")
+          //   .required("Required"),
+          /*----*/
           address: Yup.string()
             .matches(ADDRESS, "Invalid address")
             .required("Required"),
@@ -95,23 +97,19 @@ function Checkout({ bag }) {
             <label htmlFor="firstName">First Name</label>
             <Field type="text" name="firstName" />
             <ErrorMessage name="firstName" component="div" />
-            <br />
 
             <label htmlFor="lastName">Last Name</label>
             <Field type="text" name="lastName" />
             <ErrorMessage name="lastName" component="div" />
-            <br />
 
             <label htmlFor="email">Email</label>
             <Field type="email" name="email" />
             <ErrorMessage name="email" component="div" />
-            <br />
 
             {/*COUNTRY: */}
             <label htmlFor="country">Country</label>
             <Field
               component="select"
-              id="country"
               name="country"
               value={values.country}
               onChange={handleChange}
@@ -126,41 +124,39 @@ function Checkout({ bag }) {
               ))}
               <ErrorMessage name="country" component="div" />
             </Field>
-            <br />
 
             {/*CITY: */}
             <label htmlFor="city">City</label>
             <Field
               component="select"
-              id="city"
               name="city"
               value={values.city}
               onChange={handleChange}
             >
-              {values.country === "" ? (
-                <option selected disabled>
-                  Select country first
-                </option>
-              ) : (
-                countriesCities
-                  .find((countryList) => countryList.country === values.country)
-                  .cities.map((ci, index) => (
-                    <option value={ci} key={index}>
-                      {ci}
-                    </option>
-                  ))
-              )}
+              <option selected disabled={values.city}>
+                Select country first
+              </option>
+              {values.country
+                ? countriesCities
+                    .find(
+                      (countryList) => countryList.country === values.country
+                    )
+                    .cities.map((ci, index) => (
+                      <option value={ci} key={index}>
+                        {ci}
+                      </option>
+                    ))
+                : null}
               <ErrorMessage name="city" component="div" />
             </Field>
-            <br />
 
             <label htmlFor="address">Address</label>
             <Field type="text" name="address" />
             <ErrorMessage name="address" component="div" />
-            <br />
 
             <button
               className="detailButton"
+              style={{ width: "35%" }}
               type="submit"
               disabled={isSubmitting}
             >

@@ -1,31 +1,39 @@
 .checkoutForm {
-  background-color: blue;
+  /* background-color: royalblue; */
   color: rgb(100, 100, 100);
-  display: inline-block;
-  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: justify;
+  width: 60%;
   margin: 10px;
   padding: 10px;
 }
 .checkoutForm label {
-  width: 50%;
+  /* background-color: rosybrown; */
+  padding: 10px 0;
+  margin: 10px;
+  width: 25%;
 }
-input {
+.checkoutForm div {
+  /* background-color: saddlebrown; */
+  color: rgb(180, 15, 15);
+  padding-left: 15px;
+  width: 15%;
+}
+.checkoutForm input,
+select {
   border: 1px solid rgb(120, 120, 120);
   border-radius: 0.25rem;
-
   height: calc(1rem + 0.75rem + 2px);
-}
-#submit {
-  width: fit-content;
+  width: 45%;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
   .checkoutForm {
-    display: grid;
-    grid-template-columns: auto;
-    height: auto;
-  }
-  input {
-    width: 60%;
+    width: 100%;
+    align-items: baseline;
+    flex-direction: column;
   }
 }
