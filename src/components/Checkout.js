@@ -158,7 +158,7 @@ function Checkout() {
               type="submit"
               disabled={isSubmitting}
             >
-              Submit
+              Select payment option
             </button>
           </Form>
         )}

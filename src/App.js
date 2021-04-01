@@ -11,6 +11,7 @@ import ShoppingBag from "./components/ShoppingBag";
 
 function App() {
   const [bag, setBag] = useState([]);
+  const [shippingDetails, setShippingDetails] = useState([]);
   //bag=[{id, size, quantity}, {id, size, quantity}...]
   function addItemToBag(id, size) {
     /*setBag(()=>{we are updating current state, that's why I'm using function})
