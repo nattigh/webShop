@@ -4,6 +4,7 @@ import "./css/index.css";
 import Checkout from "./components/Checkout";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Payment from "./components/Payment";
 import ProductDetail from "./components/ProductDetail";
 import Products from "./components/Products";
 import ShoppingBag from "./components/ShoppingBag";
@@ -68,7 +69,8 @@ function App() {
             path="/bag"
             element={<ShoppingBag bag={bag} update={updateQuantity} />}
           />
-          <Route path="/checkout" element={<Checkout bag={bag} />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/payment" element={<Payment bag={bag} />} />
         </Routes>
       </div>
       <Footer />

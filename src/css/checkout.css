@@ -18,6 +18,8 @@
 }
 .checkoutForm div {
   /* background-color: saddlebrown; */
+  text-align: left;
+  white-space: nowrap;
   color: rgb(180, 15, 15);
   padding-left: 15px;
   width: 15%;

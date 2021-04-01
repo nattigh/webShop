@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import useFetch from "../useFetch";
 import "../css/checkout.css";
 
-function Checkout({ bag }) {
+function Checkout() {
   const [countriesCities, setCountriesCities] = useState([]);
   const ADDRESS = new RegExp(/^[a-zA-Z0-9\s,'-]*$/g);
   const COUNTRY_CITY = new RegExp(/^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/);
@@ -63,26 +63,27 @@ function Checkout({ bag }) {
         }}
         validationSchema={Yup.object({
           firstName: Yup.string()
-            .max(15, "Must be 25 characters or less")
+            .max(15, "Must be 15 characters or less")
             .required("Required"),
           lastName: Yup.string()
-            .max(20, "Must be 25 characters or less")
+            .max(20, "Must be 20 characters or less")
             .required("Required"),
           email: Yup.string()
             .email("Invalid email address")
             .required("Required"),
-          /*--COUNTRY_CITY VALIDATION--*/
-          // country: Yup.object().required("Please select a country"),
-          country: Yup.string().required("Required"),
-
-          // city: Yup.string()
-          //   .matches(COUNTRY_CITY, "Invalid city")
-          //   .required("Required"),
-          /*----*/
           address: Yup.string()
+            .min(10, "Must be at least 10 characters")
             .matches(ADDRESS, "Invalid address")
             .required("Required"),
+          country: Yup.string()
+            .matches(COUNTRY_CITY, "Invalid country")
+            .required("Select country"),
+
+          city: Yup.string()
+            .matches(COUNTRY_CITY, "Invalid city")
+            .required("Select city"),
         })}
+        /*
         onSubmit={(values, { setSubmitting }) => {
           console.log("subbmitel");
           setTimeout(() => {
@@ -90,6 +91,13 @@ function Checkout({ bag }) {
 
             setSubmitting(false);
           }, 400);
+        }}
+        */
+        onSubmit={(values, { setSubmitting }) => {
+          console.log(values);
+          alert(JSON.stringify(values, null, 2));
+
+          setSubmitting(false);
         }}
       >
         {({ isSubmitting, handleChange, values }) => (
@@ -114,16 +122,14 @@ function Checkout({ bag }) {
               value={values.country}
               onChange={handleChange}
             >
-              <option value="" selected disabled>
-                Select country
-              </option>
+              <option value="" label=" Select country" selected disabled />
               {countriesCities.map((loc, index) => (
                 <option value={loc.country} key={index}>
                   {loc.country}
                 </option>
               ))}
-              <ErrorMessage name="country" component="div" />
             </Field>
+            <ErrorMessage name="country" component="div" />
 
             {/*CITY: */}
             <label htmlFor="city">City</label>
@@ -133,9 +139,11 @@ function Checkout({ bag }) {
               value={values.city}
               onChange={handleChange}
             >
-              <option selected disabled={values.city}>
-                Select country first
-              </option>
+              <option
+                selected
+                disabled={values.city}
+                label="Select country first"
+              />
               {values.country
                 ? countriesCities
                     .find(
@@ -147,8 +155,8 @@ function Checkout({ bag }) {
                       </option>
                     ))
                 : null}
-              <ErrorMessage name="city" component="div" />
             </Field>
+            <ErrorMessage name="city" component="div" />
 
             <label htmlFor="address">Address</label>
             <Field type="text" name="address" />
