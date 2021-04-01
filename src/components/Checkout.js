@@ -83,16 +83,6 @@ function Checkout() {
             .matches(COUNTRY_CITY, "Invalid city")
             .required("Select city"),
         })}
-        /*
-        onSubmit={(values, { setSubmitting }) => {
-          console.log("subbmitel");
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-
-            setSubmitting(false);
-          }, 400);
-        }}
-        */
         onSubmit={(values, { setSubmitting }) => {
           console.log(values);
           alert(JSON.stringify(values, null, 2));
