@@ -11,10 +11,7 @@
   padding: 5px;
 }
 .detailIMG {
-  align-self: stretch;
-  width: 100%;
-  max-height: 70vh;
-  border: 0;
+  height: 500px;
 }
 .detail h1 {
   font-size: 1.8rem;
@@ -99,3 +96,13 @@
 
 /*----*/
 /*--detail---*/
+
+@media screen and (max-width: 700px) {
+  .detail {
+    grid-template-columns: auto;
+  }
+  .detailIMG {
+    width: auto;
+    max-height: 60vh;
+  }
+}

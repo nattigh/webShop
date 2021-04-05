@@ -109,4 +109,7 @@ footer p {
   .products {
     grid-template-columns: auto;
   }
+  header li {
+    margin: 5px;
+  }
 }

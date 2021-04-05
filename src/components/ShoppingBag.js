@@ -35,7 +35,7 @@ function ShoppingBag({ bag, update, CURRENCY }) {
     //console.log(id, name, price, colour, image, size);
     return (
       <div key={`${id}+${size}`}>
-        <section>
+        <section className="listOfItems">
           <article className="item">
             <img className="imgBag" src={image} alt={name} />
             <div>
@@ -69,7 +69,7 @@ function ShoppingBag({ bag, update, CURRENCY }) {
     <div>
       <h2>SHOPPING BAG</h2>
 
-      <div className="item" style={{ height: "80px" }}>
+      <div id="item2" className="item" style={{ height: "80px" }}>
         <p>IMAGE</p>
         <p>NAME/COLOUR</p>
         <p>SIZE</p>

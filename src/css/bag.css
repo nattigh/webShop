@@ -9,9 +9,24 @@
 }
 .imgBag {
   width: auto;
+  max-width: 100px;
   height: 150px;
 }
 
 h2 {
   color: rgb(100, 100, 100);
+}
+@media screen and (max-width: 750px) {
+  #item2 {
+    display: none;
+  }
+  .item {
+    display: inline-block;
+    align-items: center;
+    border-bottom: 0;
+  }
+  .listOfItems {
+    padding: 50px 0;
+    border-bottom: 2px solid rgb(220, 220, 220);
+  }
 }

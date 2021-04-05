@@ -34,8 +34,15 @@ select {
 
 @media screen and (max-width: 750px) {
   .checkoutForm {
-    width: 100%;
+    width: 80%;
     align-items: baseline;
     flex-direction: column;
+  }
+  .checkoutForm input,
+  select {
+    width: 80%;
+  }
+  .checkoutForm label {
+    width: 80%;
   }
 }

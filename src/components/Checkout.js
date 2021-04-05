@@ -157,7 +157,7 @@ function Checkout({ checkoutDetails, addShippingDetails }) {
 
             <button
               className="detailButton"
-              style={{ width: "35%" }}
+              style={{ width: "max-content", margin: "10px 0" }}
               type="submit"
               disabled={isSubmitting}
             >
