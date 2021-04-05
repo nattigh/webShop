@@ -22,7 +22,6 @@ body {
 /*Header*/
 header {
   background-color: rgb(40, 40, 40);
-  color: #ffffff;
   width: 100%;
   text-align: center;
 }
@@ -35,6 +34,15 @@ header li {
   display: inline;
   font-size: 1.2rem;
   margin: 0 15px;
+}
+
+header a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.activeLink {
+  color: rgb(120, 120, 120);
 }
 /*----*/
 
