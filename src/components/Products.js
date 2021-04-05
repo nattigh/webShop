@@ -3,7 +3,7 @@ import { productList } from "../data";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-function Products() {
+function Products({ CURRENCY }) {
   const { sex } = useParams();
   const [items, setItems] = useState([]);
   useEffect(() => {
@@ -28,7 +28,7 @@ function Products() {
           <article className="product">
             <img className="productImg" src={prod.image} alt={prod.name} />
             <p>{prod.name}</p>
-            <p>{`${prod.price} £`}</p>
+            <p>{`${prod.price} ${CURRENCY}`}</p>
           </article>
         </Link>
       ))}

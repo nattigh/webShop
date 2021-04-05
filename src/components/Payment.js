@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { productList } from "../data";
 
-const Payment = ({ bag, shippingDetails }) => {
+const Payment = ({ bag, shippingDetails, CURRENCY }) => {
   const [subtotal, setSubtotal] = useState(0);
   useEffect(() => {
     let subTotal = 0;
@@ -24,7 +24,7 @@ const Payment = ({ bag, shippingDetails }) => {
         ${shippingDetails.city}, 
         ${shippingDetails.address}`}
       </p>
-      <p>Total: {subtotal} £</p>
+      <p>{`Total: ${subtotal} ${CURRENCY}`}</p>
       <button className="detailButton" style={{ width: "15%" }}>
         PAY
       </button>

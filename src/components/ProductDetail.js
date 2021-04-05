@@ -33,8 +33,6 @@ export default function ProductDetail(props) {
         <div className="sizes">
           {Object.keys(item.sizeStock).map((size) => (
             <label className="labelDetail" key={size}>
-              {/*ha mar checked es rakattintok akkor lgyen unchecked */}
-
               {item.sizeStock[size] ? (
                 <>
                   <input
@@ -62,7 +60,7 @@ export default function ProductDetail(props) {
           ))}
         </div>
 
-        <p>Price: {item.price} £</p>
+        <p>{`Price: ${item.price} ${props.CURRENCY}`}</p>
         <div>
           <button
             className="detailButton"

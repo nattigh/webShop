@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { productList } from "../data";
 import "../css/bag.css";
-function ShoppingBag({ bag, update }) {
+function ShoppingBag({ bag, update, CURRENCY }) {
   const [subtotal, setSubtotal] = useState(0);
   /*
   itemsInBag.bag =array [{id,size,quantity},{id,size,quantity},{id,size,quantity}...]
@@ -26,7 +26,7 @@ function ShoppingBag({ bag, update }) {
     });
     setSubtotal(subTotal);
   }, [bag]);
-  //kiprobalni : const numItems = bag.reduce((counter,item)=>counter+item.quantity);
+
   function renderItem(itemInCart) {
     const { id, size, quantity } = itemInCart;
     const { price, name, colour, image } = productList.find(
@@ -43,7 +43,9 @@ function ShoppingBag({ bag, update }) {
               <p>{colour}</p>
             </div>
             <p>{size}</p>
-            <p>{price} £</p>
+            <p>
+              {price} {CURRENCY}
+            </p>
             <div>
               <select
                 onChange={(e) => update(id, size, parseInt(e.target.value))}
@@ -78,7 +80,7 @@ function ShoppingBag({ bag, update }) {
       {/*list each element from bag:{id,size,quantity} */}
       {bag.map(renderItem)}
       {/* console.log(bag) */}
-      <p>SUBTOTAL: {subtotal.toFixed(2)} £</p>
+      <p>{`SUBTOTAL: ${subtotal.toFixed(2)} ${CURRENCY}`}</p>
       <button
         className="detailButton"
         style={{ padding: "10px 50px" }}

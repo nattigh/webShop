@@ -10,6 +10,7 @@ import Products from "./components/Products";
 import ShoppingBag from "./components/ShoppingBag";
 
 function App() {
+  const CURRENCY = "$";
   const [bag, setBag] = useState([]);
   //bag=[{id, size, quantity}, {id, size, quantity}...]
   const [shippingDetails, setShippingDetails] = useState([]);
@@ -62,18 +63,26 @@ function App() {
       <Header />
       <div className="container">
         <Routes>
-          <Route exact path="/" element={<Products />} />
+          <Route exact path="/" element={<Products CURRENCY={CURRENCY} />} />
 
-          <Route path="/list/:sex" element={<Products />} />
+          <Route path="/list/:sex" element={<Products CURRENCY={CURRENCY} />} />
 
           <Route
             path="/detail/:id"
-            element={<ProductDetail addItemToBag={addItemToBag} />}
+            element={
+              <ProductDetail addItemToBag={addItemToBag} CURRENCY={CURRENCY} />
+            }
           />
           {/*console.log(bag)*/}
           <Route
             path="/bag"
-            element={<ShoppingBag bag={bag} update={updateQuantity} />}
+            element={
+              <ShoppingBag
+                bag={bag}
+                update={updateQuantity}
+                CURRENCY={CURRENCY}
+              />
+            }
           />
           <Route
             path="/checkout"
@@ -86,7 +95,13 @@ function App() {
           />
           <Route
             path="/payment"
-            element={<Payment bag={bag} shippingDetails={shippingDetails} />}
+            element={
+              <Payment
+                bag={bag}
+                shippingDetails={shippingDetails}
+                CURRENCY={CURRENCY}
+              />
+            }
           />
         </Routes>
       </div>
