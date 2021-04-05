@@ -1,10 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { productList } from "../data";
 
-const Payment = ({ bag }) => {
+const Payment = ({ bag, shippingDetails }) => {
+  const [subtotal, setSubtotal] = useState(0);
+  useEffect(() => {
+    let subTotal = 0;
+    bag.forEach((item) => {
+      const prod = productList.find((p) => p.id === parseInt(item.id));
+
+      subTotal += prod.price * item.quantity;
+    });
+    setSubtotal(subTotal);
+  }, [bag]);
+
   return (
     <>
-      <div>thank you for your purchase </div>
-      <div>{bag}</div>
+      <h1>Summary</h1>
+      <p>First name: {shippingDetails.firstName}</p>
+      <p>Last name: {shippingDetails.lastName}</p>
+      <p>Email: {shippingDetails.email}</p>
+      <p>
+        {` Shipping address: ${shippingDetails.country}, 
+        ${shippingDetails.city}, 
+        ${shippingDetails.address}`}
+      </p>
+      <p>Total: {subtotal} £</p>
+      <button className="detailButton" style={{ width: "15%" }}>
+        PAY
+      </button>
+      {/* {console.log(bag)} */}
+      {/* {console.log(shippingDetails)} */}
     </>
   );
 };

@@ -11,8 +11,9 @@ import ShoppingBag from "./components/ShoppingBag";
 
 function App() {
   const [bag, setBag] = useState([]);
-  const [shippingDetails, setShippingDetails] = useState([]);
   //bag=[{id, size, quantity}, {id, size, quantity}...]
+  const [shippingDetails, setShippingDetails] = useState([]);
+
   function addItemToBag(id, size) {
     /*setBag(()=>{we are updating current state, that's why I'm using function})
     bag structure: {id, size, quantity}
@@ -52,6 +53,10 @@ function App() {
       );
     });
   }
+  function addShippingDetails(props) {
+    setShippingDetails(props);
+  }
+
   return (
     <>
       <Header />
@@ -70,8 +75,19 @@ function App() {
             path="/bag"
             element={<ShoppingBag bag={bag} update={updateQuantity} />}
           />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/payment" element={<Payment bag={bag} />} />
+          <Route
+            path="/checkout"
+            element={
+              <Checkout
+                checkoutDetails={shippingDetails}
+                addShippingDetails={addShippingDetails}
+              />
+            }
+          />
+          <Route
+            path="/payment"
+            element={<Payment bag={bag} shippingDetails={shippingDetails} />}
+          />
         </Routes>
       </div>
       <Footer />

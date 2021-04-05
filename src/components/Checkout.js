@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import useFetch from "../useFetch";
+
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import useFetch from "../useFetch";
 import "../css/checkout.css";
 
-function Checkout() {
+function Checkout({ checkoutDetails, addShippingDetails }) {
   const [countriesCities, setCountriesCities] = useState([]);
   const ADDRESS = new RegExp(/^[a-zA-Z0-9\s,'-]*$/g);
   const COUNTRY_CITY = new RegExp(/^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/);
-
+  const navigate = useNavigate();
   //european countries:
   const { data: country, error, loading } = useFetch(
     "https://restcountries.eu/rest/v2/region/europe?fields=name;"
@@ -46,6 +48,9 @@ function Checkout() {
   if (error) return <h1>{error}</h1>;
   if (err) return <h1>{error}</h1>;
 
+  console.log("countriesCities erteke: ", countriesCities);
+  console.log("checkoutDetails erteke: ", checkoutDetails);
+
   return (
     //Formik & Yup library
     //Formik - form
@@ -78,16 +83,14 @@ function Checkout() {
           country: Yup.string()
             .matches(COUNTRY_CITY, "Invalid country")
             .required("Select country"),
-
           city: Yup.string()
             .matches(COUNTRY_CITY, "Invalid city")
             .required("Select city"),
         })}
         onSubmit={(values, { setSubmitting }) => {
-          console.log(values);
-          alert(JSON.stringify(values, null, 2));
-
+          addShippingDetails(values);
           setSubmitting(false);
+          navigate("/payment");
         }}
       >
         {({ isSubmitting, handleChange, values }) => (

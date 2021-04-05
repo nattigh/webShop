@@ -63,9 +63,10 @@ function ShoppingBag({ bag, update }) {
     );
   }
   /*------------------*/
-  return (
+  return bag.length ? (
     <div>
       <h2>SHOPPING BAG</h2>
+
       <div className="item" style={{ height: "80px" }}>
         <p>IMAGE</p>
         <p>NAME/COLOUR</p>
@@ -86,6 +87,8 @@ function ShoppingBag({ bag, update }) {
         PROCEED TO CHECKOUT
       </button>
     </div>
+  ) : (
+    <h1>SHOPPING BAG IS EMPTY</h1>
   );
 }
 
