@@ -59,12 +59,12 @@ function Checkout({ checkoutDetails, addShippingDetails }) {
       <h1> CHECKOUT </h1>
       <Formik
         initialValues={{
-          firstName: "",
-          lastName: "",
-          email: "",
+          firstName: checkoutDetails.firstName,
+          lastName: checkoutDetails.lastName,
+          email: checkoutDetails.email,
           country: "",
           city: "",
-          address: "",
+          address: checkoutDetails.address,
         }}
         validationSchema={Yup.object({
           firstName: Yup.string()
