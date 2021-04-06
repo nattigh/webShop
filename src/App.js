@@ -10,7 +10,7 @@ import Products from "./components/Products";
 import ShoppingBag from "./components/ShoppingBag";
 
 function App() {
-  const CURRENCY = "$";
+  const CURRENCY = "€";
   const [bag, setBag] = useState([]);
   //bag=[{id, size, quantity}, {id, size, quantity}...]
   const [shippingDetails, setShippingDetails] = useState([]);

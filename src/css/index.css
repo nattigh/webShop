@@ -31,7 +31,7 @@ header ul {
 }
 header li {
   /* background-color: rgb(155, 137, 207); */
-  display: inline;
+  display: inline-block;
   font-size: 1.2rem;
   margin: 0 15px;
 }
@@ -43,6 +43,11 @@ header a {
 }
 .activeLink {
   color: rgb(120, 120, 120);
+}
+header img {
+  vertical-align: middle;
+  width: 35px;
+  height: 35px;
 }
 /*----*/
 

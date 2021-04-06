@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
+import Icon_Shopping_Bag from "../Icon_Shopping_Bag.jpg";
 function Header() {
   return (
     <header>
@@ -18,7 +18,7 @@ function Header() {
           </li>
           <li>
             <NavLink to="/bag" activeClassName="activeLink">
-              Bag
+              <img src={Icon_Shopping_Bag} alt="bag" />
             </NavLink>
           </li>
         </ul>
