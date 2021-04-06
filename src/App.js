@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./css/index.css";
 import Checkout from "./components/Checkout";
@@ -11,9 +11,13 @@ import ShoppingBag from "./components/ShoppingBag";
 
 function App() {
   const CURRENCY = "€";
-  const [bag, setBag] = useState([]);
+  const [bag, setBag] = useState(
+    () => JSON.parse(localStorage.getItem("bag")) ?? []
+  );
   //bag=[{id, size, quantity}, {id, size, quantity}...]
   const [shippingDetails, setShippingDetails] = useState([]);
+
+  useEffect(() => localStorage.setItem("bag", JSON.stringify(bag)), [bag]);
 
   function addItemToBag(id, size) {
     /*setBag(()=>{we are updating current state, that's why I'm using function})
