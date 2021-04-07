@@ -10,7 +10,9 @@ function Checkout({ checkoutDetails, addShippingDetails }) {
   const [countriesCities, setCountriesCities] = useState([]);
   const ADDRESS = new RegExp(/^[a-zA-Z0-9\s,'-]*$/g);
   const COUNTRY_CITY = new RegExp(/^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/);
+
   const navigate = useNavigate();
+
   //european countries:
   const { data: country, error, loading } = useFetch(
     "https://restcountries.eu/rest/v2/region/europe?fields=name;"
