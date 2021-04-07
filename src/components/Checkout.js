@@ -62,36 +62,43 @@ function Checkout({ checkoutDetails, addShippingDetails }) {
           firstName: checkoutDetails.firstName,
           lastName: checkoutDetails.lastName,
           email: checkoutDetails.email,
+          // country: checkoutDetails,
+          // city:
+          //   countriesCities.find(
+          //     (c) => c.country === checkoutDetails.country
+          //   ) || "",
           country: "",
           city: "",
           address: checkoutDetails.address,
         }}
         validationSchema={Yup.object({
-          firstName: Yup.string()
-            .max(15, "Must be 15 characters or less")
-            .required("Required"),
-          lastName: Yup.string()
-            .max(20, "Must be 20 characters or less")
-            .required("Required"),
-          email: Yup.string()
-            .email("Invalid email address")
-            .required("Required"),
-          address: Yup.string()
-            .min(10, "Must be at least 10 characters")
-            .matches(ADDRESS, "Invalid address")
-            .required("Required"),
-          country: Yup.string()
-            .matches(COUNTRY_CITY, "Invalid country")
-            .required("Select country"),
-          city: Yup.string()
-            .matches(COUNTRY_CITY, "Invalid city")
-            .required("Select city"),
+          // firstName: Yup.string()
+          //   .max(15, "Must be 15 characters or less")
+          //   .required("Required"),
+          // lastName: Yup.string()
+          //   .max(20, "Must be 20 characters or less")
+          //   .required("Required"),
+          // email: Yup.string()
+          //   .email("Invalid email address")
+          //   .required("Required"),
+          // address: Yup.string()
+          //   .min(10, "Must be at least 10 characters")
+          //   .matches(ADDRESS, "Invalid address")
+          //   .required("Required"),
+          // country: Yup.string()
+          //   .matches(COUNTRY_CITY, "Invalid country")
+          //   .required("Select country"),
+          // city: Yup.string()
+          //   .matches(COUNTRY_CITY, "Invalid city")
+          //   .required("Select city"),
         })}
         onSubmit={(values, { setSubmitting }) => {
+          console.log("values: ", values);
           addShippingDetails(values);
           setSubmitting(false);
           navigate("/payment");
         }}
+        //enableReinitialize
       >
         {({ isSubmitting, handleChange, values }) => (
           <Form className="checkoutForm">
@@ -112,10 +119,14 @@ function Checkout({ checkoutDetails, addShippingDetails }) {
             <Field
               component="select"
               name="country"
-              value={values.country}
+              // value={checkoutDetails.country}
               onChange={handleChange}
             >
-              <option value="" label=" Select country" selected disabled />
+              <option
+                selected
+                value={checkoutDetails.country || ""}
+                label={checkoutDetails.country || "Select country first"}
+              />
               {countriesCities.map((loc, index) => (
                 <option value={loc.country} key={index}>
                   {loc.country}
@@ -129,13 +140,14 @@ function Checkout({ checkoutDetails, addShippingDetails }) {
             <Field
               component="select"
               name="city"
-              value={values.city}
+              //value={checkoutDetails.city}
               onChange={handleChange}
             >
               <option
                 selected
-                disabled={values.city}
-                label="Select country first"
+                value={checkoutDetails.city || ""}
+                // disabled={values.city}
+                label={checkoutDetails.city || "Select country first"}
               />
               {values.country
                 ? countriesCities
