@@ -1,17 +1,18 @@
-import React, { useEffect, useState } from "react";
-import { productList } from "../data";
+import useFetch from "../useFetch";
 
 const Payment = ({ bag, shippingDetails, CURRENCY }) => {
-  const [subtotal, setSubtotal] = useState(0);
-  useEffect(() => {
-    let subTotal = 0;
-    bag.forEach((item) => {
-      const prod = productList.find((p) => p.id === parseInt(item.id));
+  const { data: productList, error, loading } = useFetch(
+    "http://localhost:3001/stock"
+  );
+  if (loading) return <h1>Loading...</h1>;
+  if (error) return <h1>Something went wrong</h1>;
 
-      subTotal += prod.price * item.quantity;
-    });
-    setSubtotal(subTotal);
-  }, [bag]);
+  let subTotal = 0;
+  bag.forEach((item) => {
+    const prod = productList.find((p) => p.id === parseInt(item.id));
+
+    subTotal += prod.price * item.quantity;
+  });
 
   return (
     <>
@@ -24,7 +25,7 @@ const Payment = ({ bag, shippingDetails, CURRENCY }) => {
         ${shippingDetails.city}, 
         ${shippingDetails.address}`}
       </p>
-      <p>{`Total: ${subtotal} ${CURRENCY}`}</p>
+      <p>{`Total: ${subTotal} ${CURRENCY}`}</p>
       <button className="detailButton" style={{ width: "15%" }}>
         PAY
       </button>

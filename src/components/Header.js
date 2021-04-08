@@ -7,12 +7,12 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <NavLink to="/list/mens" activeClassName="activeLink">
+            <NavLink to="/mens" activeClassName="activeLink">
               Men
             </NavLink>
           </li>
           <li>
-            <NavLink to="/list/womens" activeClassName="activeLink">
+            <NavLink to="/womens" activeClassName="activeLink">
               Women
             </NavLink>
           </li>

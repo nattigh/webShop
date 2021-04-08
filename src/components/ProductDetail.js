@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { productList } from "../data";
+import useFetch from "../useFetch";
 import "../css/detail.css";
 
 export default function ProductDetail(props) {
   const { id } = useParams();
   const navigate = useNavigate();
   const [selected, setSelected] = useState(null);
+
+  const { data: productList, error, loading } = useFetch(
+    "http://localhost:3001/stock"
+  );
+  if (loading) return <h1>Loading...</h1>;
+  if (error) return <h1>Something went wrong</h1>;
 
   const item = productList.find(
     (prodID) => prodID.id === Number.parseInt(id, 10)

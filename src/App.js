@@ -69,7 +69,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Products CURRENCY={CURRENCY} />} />
 
-          <Route path="/list/:sex" element={<Products CURRENCY={CURRENCY} />} />
+          <Route path="/:sex" element={<Products CURRENCY={CURRENCY} />} />
 
           <Route
             path="/detail/:id"

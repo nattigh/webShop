@@ -1,33 +1,34 @@
-import React, { useEffect, useState } from "react";
+import useFetch from "../useFetch";
 import { useNavigate } from "react-router-dom";
-import { productList } from "../data";
 import "../css/bag.css";
 function ShoppingBag({ bag, update, CURRENCY }) {
-  const [subtotal, setSubtotal] = useState(0);
   /*
-  itemsInBag.bag =array [{id,size,quantity},{id,size,quantity},{id,size,quantity}...]
-  update - function-increase quantity based on selected value
+  bag =array [{id,size,quantity},{id,size,quantity},{id,size,quantity}...]
   App:
-    <Route
-      path="/bag"
-      element={<ShoppingBag bag={bag} update={updateQuantity} />}
-    />;
+  <Route
+  path="/bag"
+  element={<ShoppingBag bag={bag} update={updateQuantity} />}
+  />;
+  //update - function-increase quantity based on selected value
 */
-  //console.log(products);
-  //const products = itemsInBag.bag.map((i) => console.log(productList[i.id]));
   /*---------------------- */
   const navigate = useNavigate();
-  useEffect(() => {
-    let subTotal = 0;
-    bag.forEach((item) => {
-      const prod = productList.find((p) => p.id === parseInt(item.id));
 
-      subTotal += prod.price * item.quantity;
-    });
-    setSubtotal(subTotal);
-  }, [bag]);
+  const { data: productList, error, loading } = useFetch(
+    "http://localhost:3001/stock"
+  );
 
-  function renderItem(itemInCart) {
+  if (loading) return <h1>Loading...</h1>;
+  if (error) return <h1>Something went wrong</h1>;
+
+  let subTotal = 0;
+  bag.forEach((item) => {
+    const prod = productList.find((p) => p.id === parseInt(item.id));
+
+    subTotal += prod.price * item.quantity;
+  });
+
+  function listItem(itemInCart) {
     const { id, size, quantity } = itemInCart;
     const { price, name, colour, image } = productList.find(
       (p) => p.id === parseInt(id)
@@ -78,9 +79,9 @@ function ShoppingBag({ bag, update, CURRENCY }) {
         <p>TOTAL</p>
       </div>
       {/*list each element from bag:{id,size,quantity} */}
-      {bag.map(renderItem)}
+      {bag.map(listItem)}
       {/* console.log(bag) */}
-      <p>{`SUBTOTAL: ${subtotal.toFixed(2)} ${CURRENCY}`}</p>
+      <p>{`SUBTOTAL: ${subTotal.toFixed(2)} ${CURRENCY}`}</p>
       <button
         className="detailButton"
         style={{ padding: "10px 50px" }}
