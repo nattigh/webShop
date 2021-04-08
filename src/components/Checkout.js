@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useFetch from "../useFetch";
 
@@ -7,7 +6,6 @@ import * as Yup from "yup";
 import "../css/checkout.css";
 
 function Checkout({ checkoutDetails, addShippingDetails }) {
-  const [countriesCities, setCountriesCities] = useState([]);
   const ADDRESS = new RegExp(/^[a-zA-Z0-9\s,'-]*$/g);
   const COUNTRY_CITY = new RegExp(/^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/);
 
@@ -19,10 +17,9 @@ function Checkout({ checkoutDetails, addShippingDetails }) {
   );
 
   //all countries+cities:
-  const { data: cities, err, lo } = useFetch(
+  const { data: cities, error: err, loading: load } = useFetch(
     "https://countriesnow.space/api/v0.1/countries"
   );
-
   //COUNTRY:
   //Array(53) [ 0: Object { name: "Åland Islands" }, 1: Object { name: "Albania" }, … ]
 
@@ -33,25 +30,17 @@ function Checkout({ checkoutDetails, addShippingDetails }) {
     2: Object { country: "Algeria", cities: Array(32) [ "Algiers", "Annaba", "Azazga", … ] }, 
   … ]*/
 
-  //merge EU countries with corresponding cities:
-  useEffect(() => {
-    if (cities && country) {
-      const merged = [];
-      country.forEach((element) => {
-        let value = cities.data.find((ci) => ci.country === element.name);
-        if (value) merged.push(value);
-      });
-      setCountriesCities(merged);
-      //console.log(merged);//0: Object { country: "Albania", cities: (6) […],..}
-    }
-  }, [cities, country]);
-
-  if (loading || lo) return <h1>Loading...</h1>;
+  if (loading || load) return <h1>Loading...</h1>;
   if (error) return <h1>{error}</h1>;
-  if (err) return <h1>{error}</h1>;
+  if (err) return <h1>{err}</h1>;
+  //merge EU countries with corresponding cities:
 
-  console.log("countriesCities erteke: ", countriesCities);
-  console.log("checkoutDetails erteke: ", checkoutDetails);
+  let countriesCities = [];
+  country.forEach((element) => {
+    let value = cities.data.find((ci) => ci.country === element.name);
+    if (value) countriesCities.push(value);
+  });
+  //console.log(merged);//0: Object { country: "Albania", cities: (6) […],..}
 
   return (
     //Formik & Yup library
@@ -61,46 +50,40 @@ function Checkout({ checkoutDetails, addShippingDetails }) {
       <h1> CHECKOUT </h1>
       <Formik
         initialValues={{
-          firstName: checkoutDetails.firstName,
-          lastName: checkoutDetails.lastName,
-          email: checkoutDetails.email,
-          // country: checkoutDetails,
-          // city:
-          //   countriesCities.find(
-          //     (c) => c.country === checkoutDetails.country
-          //   ) || "",
-          country: "",
-          city: "",
-          address: checkoutDetails.address,
+          firstName: checkoutDetails.firstName || "",
+          lastName: checkoutDetails.lastName || "",
+          email: checkoutDetails.email || "",
+          country: checkoutDetails.country || "",
+          city: checkoutDetails.city || "",
+          address: checkoutDetails.address || "",
         }}
         validationSchema={Yup.object({
-          // firstName: Yup.string()
-          //   .max(15, "Must be 15 characters or less")
-          //   .required("Required"),
-          // lastName: Yup.string()
-          //   .max(20, "Must be 20 characters or less")
-          //   .required("Required"),
-          // email: Yup.string()
-          //   .email("Invalid email address")
-          //   .required("Required"),
-          // address: Yup.string()
-          //   .min(10, "Must be at least 10 characters")
-          //   .matches(ADDRESS, "Invalid address")
-          //   .required("Required"),
-          // country: Yup.string()
-          //   .matches(COUNTRY_CITY, "Invalid country")
-          //   .required("Select country"),
-          // city: Yup.string()
-          //   .matches(COUNTRY_CITY, "Invalid city")
-          //   .required("Select city"),
+          firstName: Yup.string()
+            .max(15, "Must be 15 characters or less")
+            .required("Required"),
+          lastName: Yup.string()
+            .max(20, "Must be 20 characters or less")
+            .required("Required"),
+          email: Yup.string()
+            .email("Invalid email address")
+            .required("Required"),
+          address: Yup.string()
+            .min(10, "Must be at least 10 characters")
+            .matches(ADDRESS, "Invalid address")
+            .required("Required"),
+          country: Yup.string()
+            .matches(COUNTRY_CITY, "Invalid country")
+            .required("Select country"),
+          city: Yup.string()
+            .matches(COUNTRY_CITY, "Invalid city")
+            .required("Select city"),
         })}
         onSubmit={(values, { setSubmitting }) => {
-          console.log("values: ", values);
+          // console.log("values: ", values);
           addShippingDetails(values);
           setSubmitting(false);
           navigate("/payment");
         }}
-        //enableReinitialize
       >
         {({ isSubmitting, handleChange, values }) => (
           <Form className="checkoutForm">
@@ -139,17 +122,20 @@ function Checkout({ checkoutDetails, addShippingDetails }) {
 
             {/*CITY: */}
             <label htmlFor="city">City</label>
-            <Field
-              component="select"
-              name="city"
-              //value={checkoutDetails.city}
-              onChange={handleChange}
-            >
+            <Field component="select" name="city" onChange={handleChange}>
               <option
                 selected
-                value={checkoutDetails.city || ""}
-                // disabled={values.city}
-                label={checkoutDetails.city || "Select country first"}
+                value={
+                  values.country !== checkoutDetails.country
+                    ? ""
+                    : checkoutDetails.city
+                }
+                disabled={values.country !== checkoutDetails.country}
+                label={
+                  values.country !== checkoutDetails.country
+                    ? "Select country first"
+                    : checkoutDetails.city
+                }
               />
               {values.country
                 ? countriesCities
