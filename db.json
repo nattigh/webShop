@@ -6,591 +6,65 @@
       "colour": "Navy",
       "category": "Top",
       "sex": "M",
-      "sizeStock": {
-        "S": 16,
-        "M": 25,
-        "L": 23,
-        "XL": 0
-      },
-      "image": "https://www.rankandstyle.com/media/lists/m/mens-long-sleeve-t-shirts_L57UNBj.jpg",
+      "sizeStock": { "S": 0, "M": 25, "L": 23, "XL": 18 },
+      "image": "/pictures/Navytopmen.jpg",
       "price": 25,
       "description": "Most men cycle through a simple yet dependable wardrobe full of t-shirts, button-downs, sweaters, suits, and outerwear. But there is one key item that you may be missing and, once you have it, you’ll wonder how you went so long without it."
     },
     {
-      "name": "Practical Steel Computer",
-      "colour": "purple",
-      "category": "Bacon",
+      "id": 2,
+      "name": "Black top men",
+      "colour": "Black",
+      "category": "Top",
       "sex": "M",
-      "sizeStock": {
-        "XS": 33,
-        "S": 20,
-        "M": 7,
-        "L": 5
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=98223",
-      "price": 317,
-      "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
-      "id": 2
+      "sizeStock": { "S": 24, "M": 37, "L": 43, "XL": 0 },
+      "image": "/pictures/Blacktopmen.jpg",
+      "price": 23,
+      "description": "Blank black long sleeve men shirt,comfortable fit,good workmanship from strictly controlled productionline."
     },
     {
-      "name": "Rustic Steel Chips",
-      "colour": "maroon",
-      "category": "Chips",
+      "id": 3,
+      "name": "Burgundy top women",
+      "colour": "Burgundy",
+      "category": "Top",
+      "sex": "W",
+      "sizeStock": { "XS": 23, "S": 0, "M": 35, "L": 21 },
+      "image": "/pictures/Burgundytopwomen.jpg",
+      "price": 29.99,
+      "description": "The must-have long sleeve tee receives a refined update with a luxuriously soft poly-viscose blend that is designed to drape perfectly and accentuate a woman's figure as well as 2x1 ribbed knit long sleeves that flatter the arms in all the right places."
+    },
+    {
+      "id": 4,
+      "name": "Khaki top women",
+      "colour": "Khaki",
+      "category": "Top",
+      "sex": "W",
+      "sizeStock": { "XS": 0, "S": 0, "M": 20, "L": 11 },
+      "image": "/pictures/Khakitopwomen.jpg",
+      "price": 33,
+      "description": "This crazy-soft tee is made from yarn that is spun, knit, fabric dyed and finished in the USA. Cut and sewn ethically."
+    },
+    {
+      "id": 5,
+      "name": "Black trouser men",
+      "colour": "Black",
+      "category": "Trouser",
       "sex": "M",
-      "sizeStock": {
-        "XS": 17,
-        "S": 20,
-        "M": 26,
-        "L": 32
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=52154",
-      "price": 494,
-      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
-      "id": 3
+      "sizeStock": { "30": 15, "32": 23, "34": 24, "36": 16 },
+      "image": "/pictures/Blacktrousermen.jpg",
+      "price": 30,
+      "description": "Get noticed for all the right reasons wearing these Black formal trousers For Men from the house of Haoser. Made from poly Cotton, these formal pant for men blue are quite comfortable to wear. Featuring slim fit, these trousers will be best teamed with an off-white shirt and formal shoes."
     },
     {
-      "name": "Small Fresh Gloves",
-      "colour": "tan",
-      "category": "Tuna",
+      "id": 6,
+      "name": "Navy trouser women",
+      "colour": "Navy",
+      "category": "Trouser",
       "sex": "W",
-      "sizeStock": {
-        "XS": 14,
-        "S": 7,
-        "M": 62,
-        "L": 13
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=93799",
-      "price": 261,
-      "description": "The Football Is Good For Training And Recreational Purposes",
-      "id": 4
-    },
-    {
-      "name": "Tasty Metal Chicken",
-      "colour": "lime",
-      "category": "Computer",
-      "sex": "W",
-      "sizeStock": {
-        "XS": 3,
-        "S": 48,
-        "M": 47,
-        "L": 22
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=61321",
-      "price": 307,
-      "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
-      "id": 5
-    },
-    {
-      "name": "Rustic Plastic Shoes",
-      "colour": "azure",
-      "category": "Pizza",
-      "sex": "M",
-      "sizeStock": {
-        "XS": 48,
-        "S": 24,
-        "M": 51,
-        "L": 44
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=23379",
-      "price": 278,
-      "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
-      "id": 6
-    },
-    {
-      "name": "Awesome Metal Mouse",
-      "colour": "violet",
-      "category": "Fish",
-      "sex": "M",
-      "sizeStock": {
-        "XS": 14,
-        "S": 11,
-        "M": 0,
-        "L": 15
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=28980",
-      "price": 457,
-      "description": "The Football Is Good For Training And Recreational Purposes",
-      "id": 7
-    },
-    {
-      "name": "Unbranded Frozen Ball",
-      "colour": "orchid",
-      "category": "Pants",
-      "sex": "W",
-      "sizeStock": {
-        "XS": 17,
-        "S": 27,
-        "M": 56,
-        "L": 15
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=67953",
-      "price": 301,
-      "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
-      "id": 8
-    },
-    {
-      "name": "Small Fresh Keyboard",
-      "colour": "silver",
-      "category": "Shirt",
-      "sex": "M",
-      "sizeStock": {
-        "XS": 45,
-        "S": 60,
-        "M": 67,
-        "L": 8
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=91132",
-      "price": 486,
-      "description": "The Football Is Good For Training And Recreational Purposes",
-      "id": 9
-    },
-    {
-      "name": "Awesome Soft Bike",
-      "colour": "grey",
-      "category": "Car",
-      "sex": "M",
-      "sizeStock": {
-        "XS": 33,
-        "S": 29,
-        "M": 2,
-        "L": 7
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=99220",
-      "price": 232,
-      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
-      "id": 10
-    },
-    {
-      "name": "Gorgeous Soft Sausages",
-      "colour": "gold",
-      "category": "Shoes",
-      "sex": "W",
-      "sizeStock": {
-        "XS": 43,
-        "S": 28,
-        "M": 11,
-        "L": 2
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=88328",
-      "price": 167,
-      "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
-      "id": 11
-    },
-    {
-      "name": "Ergonomic Concrete Bike",
-      "colour": "blue",
-      "category": "Keyboard",
-      "sex": "W",
-      "sizeStock": {
-        "XS": 2,
-        "S": 24,
-        "M": 47,
-        "L": 9
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=88399",
-      "price": 308,
-      "description": "The Football Is Good For Training And Recreational Purposes",
-      "id": 12
-    },
-    {
-      "name": "Handcrafted Plastic Chips",
-      "colour": "silver",
-      "category": "Fish",
-      "sex": "W",
-      "sizeStock": {
-        "XS": 33,
-        "S": 44,
-        "M": 39,
-        "L": 47
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=77774",
-      "price": 286,
-      "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
-      "id": 13
-    },
-    {
-      "name": "Refined Soft Chips",
-      "colour": "olive",
-      "category": "Chips",
-      "sex": "W",
-      "sizeStock": {
-        "XS": 0,
-        "S": 67,
-        "M": 28,
-        "L": 36
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=51080",
-      "price": 191,
-      "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
-      "id": 14
-    },
-    {
-      "name": "Sleek Plastic Bacon",
-      "colour": "olive",
-      "category": "Tuna",
-      "sex": "W",
-      "sizeStock": {
-        "XS": 0,
-        "S": 2,
-        "M": 47,
-        "L": 34
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=35266",
-      "price": 199,
-      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "id": 15
-    },
-    {
-      "name": "Incredible Granite Table",
-      "colour": "ivory",
-      "category": "Ball",
-      "sex": "W",
-      "sizeStock": {
-        "XS": 38,
-        "S": 63,
-        "M": 67,
-        "L": 43
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=61062",
-      "price": 399,
-      "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
-      "id": 16
-    },
-    {
-      "name": "Generic Soft Chips",
-      "colour": "blue",
-      "category": "Mouse",
-      "sex": "W",
-      "sizeStock": {
-        "XS": 20,
-        "S": 47,
-        "M": 10,
-        "L": 46
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=72255",
-      "price": 155,
-      "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
-      "id": 17
-    },
-    {
-      "name": "Gorgeous Cotton Table",
-      "colour": "blue",
-      "category": "Mouse",
-      "sex": "M",
-      "sizeStock": {
-        "XS": 8,
-        "S": 41,
-        "M": 18,
-        "L": 40
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=26321",
-      "price": 401,
-      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "id": 18
-    },
-    {
-      "name": "Sleek Fresh Fish",
-      "colour": "fuchsia",
-      "category": "Towels",
-      "sex": "W",
-      "sizeStock": {
-        "XS": 5,
-        "S": 6,
-        "M": 39,
-        "L": 34
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=96219",
-      "price": 160,
-      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
-      "id": 19
-    },
-    {
-      "name": "Unbranded Soft Shirt",
-      "colour": "salmon",
-      "category": "Keyboard",
-      "sex": "M",
-      "sizeStock": {
-        "XS": 25,
-        "S": 21,
-        "M": 10,
-        "L": 24
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=86410",
-      "price": 442,
-      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
-      "id": 20
-    },
-    {
-      "name": "Licensed Fresh Pizza",
-      "colour": "teal",
-      "category": "Ball",
-      "sex": "M",
-      "sizeStock": {
-        "XS": 1,
-        "S": 41,
-        "M": 65,
-        "L": 19
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=41819",
-      "price": 137,
-      "description": "The Football Is Good For Training And Recreational Purposes",
-      "id": 21
-    },
-    {
-      "name": "Sleek Fresh Soap",
-      "colour": "magenta",
-      "category": "Bacon",
-      "sex": "W",
-      "sizeStock": {
-        "XS": 32,
-        "S": 65,
-        "M": 49,
-        "L": 42
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=84723",
-      "price": 254,
-      "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
-      "id": 22
-    },
-    {
-      "name": "Refined Frozen Tuna",
-      "colour": "green",
-      "category": "Bike",
-      "sex": "M",
-      "sizeStock": {
-        "XS": 15,
-        "S": 37,
-        "M": 2,
-        "L": 10
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=74872",
-      "price": 243,
-      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "id": 23
-    },
-    {
-      "name": "Small Plastic Shoes",
-      "colour": "white",
-      "category": "Car",
-      "sex": "W",
-      "sizeStock": {
-        "XS": 26,
-        "S": 23,
-        "M": 7,
-        "L": 33
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=95245",
-      "price": 266,
-      "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
-      "id": 24
-    },
-    {
-      "name": "Generic Fresh Tuna",
-      "colour": "turquoise",
-      "category": "Car",
-      "sex": "W",
-      "sizeStock": {
-        "XS": 24,
-        "S": 49,
-        "M": 64,
-        "L": 32
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=18120",
-      "price": 229,
-      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
-      "id": 25
-    },
-    {
-      "name": "Incredible Concrete Gloves",
-      "colour": "silver",
-      "category": "Sausages",
-      "sex": "M",
-      "sizeStock": {
-        "XS": 24,
-        "S": 33,
-        "M": 44,
-        "L": 24
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=87606",
-      "price": 486,
-      "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
-      "id": 26
-    },
-    {
-      "name": "Unbranded Soft Gloves",
-      "colour": "turquoise",
-      "category": "Chair",
-      "sex": "M",
-      "sizeStock": {
-        "XS": 30,
-        "S": 47,
-        "M": 35,
-        "L": 23
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=77761",
-      "price": 169,
-      "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-      "id": 27
-    },
-    {
-      "name": "Generic Concrete Bike",
-      "colour": "magenta",
-      "category": "Mouse",
-      "sex": "W",
-      "sizeStock": {
-        "XS": 33,
-        "S": 42,
-        "M": 18,
-        "L": 44
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=80793",
-      "price": 170,
-      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
-      "id": 28
-    },
-    {
-      "name": "Sleek Steel Mouse",
-      "colour": "plum",
-      "category": "Pants",
-      "sex": "M",
-      "sizeStock": {
-        "XS": 37,
-        "S": 40,
-        "M": 41,
-        "L": 2
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=51664",
-      "price": 212,
-      "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
-      "id": 29
-    },
-    {
-      "name": "Tasty Concrete Pizza",
-      "colour": "mint green",
-      "category": "Ball",
-      "sex": "M",
-      "sizeStock": {
-        "XS": 10,
-        "S": 5,
-        "M": 11,
-        "L": 32
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=19330",
-      "price": 308,
-      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "id": 30
-    },
-    {
-      "name": "Tasty Wooden Cheese",
-      "colour": "salmon",
-      "category": "Shoes",
-      "sex": "M",
-      "sizeStock": {
-        "XS": 3,
-        "S": 51,
-        "M": 42,
-        "L": 14
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=76909",
-      "price": 478,
-      "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
-      "id": 31
-    },
-    {
-      "name": "Gorgeous Metal Shoes",
-      "colour": "olive",
-      "category": "Shirt",
-      "sex": "M",
-      "sizeStock": {
-        "XS": 30,
-        "S": 22,
-        "M": 35,
-        "L": 26
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=69403",
-      "price": 404,
-      "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
-      "id": 32
-    },
-    {
-      "name": "Tasty Rubber Fish",
-      "colour": "indigo",
-      "category": "Salad",
-      "sex": "W",
-      "sizeStock": {
-        "XS": 48,
-        "S": 23,
-        "M": 46,
-        "L": 32
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=52136",
-      "price": 256,
-      "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
-      "id": 33
-    },
-    {
-      "name": "Rustic Cotton Pants",
-      "colour": "violet",
-      "category": "Hat",
-      "sex": "M",
-      "sizeStock": {
-        "XS": 41,
-        "S": 40,
-        "M": 2,
-        "L": 1
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=63208",
-      "price": 431,
-      "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
-      "id": 34
-    },
-    {
-      "name": "Handmade Concrete Mouse",
-      "colour": "yellow",
-      "category": "Computer",
-      "sex": "M",
-      "sizeStock": {
-        "XS": 17,
-        "S": 45,
-        "M": 51,
-        "L": 39
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=69172",
-      "price": 236,
-      "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
-      "id": 35
-    },
-    {
-      "name": "Sleek Wooden Pizza",
-      "colour": "gold",
-      "category": "Sausages",
-      "sex": "W",
-      "sizeStock": {
-        "XS": 14,
-        "S": 12,
-        "M": 0,
-        "L": 33
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=36119",
-      "price": 175,
-      "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
-      "id": 36
-    },
-    {
-      "name": "Ergonomic Metal Pizza",
-      "colour": "lime",
-      "category": "Keyboard",
-      "sex": "W",
-      "sizeStock": {
-        "XS": 41,
-        "S": 3,
-        "M": 8,
-        "L": 7
-      },
-      "image": "http://placeimg.com/500/500/fashion?random=19146",
-      "price": 198,
-      "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
-      "id": 37
+      "sizeStock": { "28": 14, "30": 22, "32": 21, "34": 12 },
+      "image": "/pictures/Navytrouserwomen.jpg",
+      "price": 35,
+      "description": "The Smith Trousers are crafted in 100% superfine Merino wool woven in Yorkshire by Joseph H Clissold. British cloth is recognised around the world as the finest available and this firm has been producing cloth for over a 100 years."
     }
   ]
 }

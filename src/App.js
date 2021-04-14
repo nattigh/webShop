@@ -46,51 +46,6 @@ function App() {
     });
   }
 
-  /*faker.js * /
-  useEffect(() => {
-    let stock = [];
-    for (let i = 1; i <= 50; i++) {
-      let name = faker.commerce.productName();
-      let colour = faker.commerce.color();
-      let category = faker.commerce.product();
-      let sex = "";
-      //0="M", 1="W"
-      Math.floor(Math.random() * 2) === 0 ? (sex = "M") : (sex = "W");
-      let sizeStock = {
-        XS: Math.floor(Math.random() * 50),
-        S: Math.floor(Math.random() * 70),
-        M: Math.floor(Math.random() * 70),
-        L: Math.floor(Math.random() * 50),
-      };
-      //random 5 digit number, for unique image url
-      let image = `${faker.image.fashion(500, 500)}?random=${
-        Math.floor(Math.random() * 90000) + 10000
-      }`;
-
-      let price = parseInt(faker.commerce.price(100, 500), 10);
-      let description = faker.commerce.productDescription();
-      //id generated automatically
-      stock.push({
-        name,
-        colour,
-        category,
-        sex,
-        sizeStock,
-        image,
-        price,
-        description,
-      });
-    }
-    // console.log(stock);
-    stock.forEach((e) => {
-      postData("http://localhost:3001/stock", { ...e }).then((data) => {
-        console.log(data);
-      });
-    });
-  }, []);
-
-  /*----- */
-
   function updateQuantity(id, size, newQuantity) {
     setBag((bagCurrentState) => {
       if (newQuantity === 0) {
@@ -109,6 +64,50 @@ function App() {
   function addShippingDetails(props) {
     setShippingDetails(props);
   }
+
+  /*faker.js * /
+      useEffect(() => {
+        let stock = [];
+        for (let i = 1; i <= 50; i++) {
+          let name = faker.commerce.productName();
+          let colour = faker.commerce.color();
+          let category = faker.commerce.product();
+          let sex = "";
+          //0="M", 1="W"
+          Math.floor(Math.random() * 2) === 0 ? (sex = "M") : (sex = "W");
+          let sizeStock = {
+            XS: Math.floor(Math.random() * 50),
+            S: Math.floor(Math.random() * 70),
+            M: Math.floor(Math.random() * 70),
+            L: Math.floor(Math.random() * 50),
+          };
+          //random 5 digit number, for unique image url
+          let image = `${faker.image.fashion(500, 500)}?random=${
+            Math.floor(Math.random() * 90000) + 10000
+          }`;
+    
+          let price = parseInt(faker.commerce.price(100, 500), 10);
+          let description = faker.commerce.productDescription();
+          //id generated automatically
+          stock.push({
+            name,
+            colour,
+            category,
+            sex,
+            sizeStock,
+            image,
+            price,
+            description,
+          });
+        }
+        // console.log(stock);
+        stock.forEach((e) => {
+          postData("http://localhost:3001/stock", { ...e }).then((data) => {
+            console.log(data);
+          });
+        });
+      }, []);
+  /*----- */
 
   return (
     <>
