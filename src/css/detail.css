@@ -11,6 +11,7 @@
   padding: 5px;
 }
 .detailIMG {
+  max-width: 80%;
   height: 500px;
 }
 .detail h1 {
@@ -97,7 +98,7 @@
 /*----*/
 /*--detail---*/
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1000px) {
   .detail {
     grid-template-columns: auto;
   }
