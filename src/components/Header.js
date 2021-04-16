@@ -12,21 +12,15 @@ function Header() {
               Men
             </NavLink>
             <ul className="dropdownList">
-              <li>
-                <NavLink to="/mens/Tops" activeClassName="activeLink">
-                  Tops
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/mens/Trousers" activeClassName="activeLink">
-                  Trousers
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/mens/Shoes" activeClassName="activeLink">
-                  Shoes
-                </NavLink>
-              </li>
+              <NavLink to="/mens/Tops" activeClassName="activeLink">
+                <li>Tops</li>
+              </NavLink>
+              <NavLink to="/mens/Trousers" activeClassName="activeLink">
+                <li>Trousers</li>
+              </NavLink>
+              <NavLink to="/mens/Shoes" activeClassName="activeLink">
+                <li>Shoes</li>
+              </NavLink>
             </ul>
           </li>
 
@@ -35,16 +29,12 @@ function Header() {
               Women
             </NavLink>
             <ul className="dropdownList">
-              <li>
-                <NavLink to="/womens/Tops" activeClassName="activeLink">
-                  Tops
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/womens/Trousers" activeClassName="activeLink">
-                  Trousers
-                </NavLink>
-              </li>
+              <NavLink to="/womens/Tops" activeClassName="activeLink">
+                <li>Tops</li>
+              </NavLink>
+              <NavLink to="/womens/Trousers" activeClassName="activeLink">
+                <li>Trousers</li>
+              </NavLink>
             </ul>
           </li>
           <li className="menuOption">
