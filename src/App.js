@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./css/index.css";
-import faker from "faker";
-import postData from "./postData";
+// import faker from "faker";
+// import postData from "./postData";
 
 import Checkout from "./components/Checkout";
 import Footer from "./components/Footer";

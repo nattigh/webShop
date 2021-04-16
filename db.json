@@ -98,6 +98,17 @@
       "image": "/pictures/Brownshoemen.jpg",
       "price": 85,
       "description": "Brown shoe for men. Leather upper with laces. 70% EVA and 30% rubber outsole. Our Smith boasts a classic design with a relaxed feel and high flexibility."
+    },
+    {
+      "id": 10,
+      "name": "Navy dress women",
+      "colour": "Navy",
+      "category": "Dresses",
+      "sex": "W",
+      "sizeStock": { "XS": 4, "S": 11, "M": 10, "L": 7 },
+      "image": "/pictures/Navydresswomen.jpg",
+      "price": 140,
+      "description": "A simple and classic dress the Ivy is perfect for bridesmaids, date night or going to church! Dress it up or down with your accessories and shoes! Ivy Modest Dress in Navy Blue"
     }
   ]
 }
