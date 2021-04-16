@@ -50,7 +50,6 @@ function App() {
     setBag((bagCurrentState) => {
       if (newQuantity === 0) {
         return bagCurrentState.filter(
-          //minden amire teljesul a feltetel bennmarad
           (item) => !(item.id === id && item.size === size)
         );
       }
@@ -116,7 +115,10 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Products CURRENCY={CURRENCY} />} />
 
-          <Route path="/:sex" element={<Products CURRENCY={CURRENCY} />} />
+          <Route
+            path="/:sex/:category"
+            element={<Products CURRENCY={CURRENCY} />}
+          />
 
           <Route
             path="/detail/:id"

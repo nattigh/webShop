@@ -19,38 +19,6 @@ body {
   margin: 0;
 }
 
-/*Header*/
-header {
-  background-color: rgb(40, 40, 40);
-  width: 100%;
-  text-align: center;
-}
-header ul {
-  margin-top: 0;
-  padding: 10px 0;
-}
-header li {
-  /* background-color: rgb(155, 137, 207); */
-  display: inline-block;
-  font-size: 1.2rem;
-  margin: 0 15px;
-}
-
-header a {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-.activeLink {
-  color: rgb(120, 120, 120);
-}
-header img {
-  vertical-align: middle;
-  width: 35px;
-  height: 35px;
-}
-/*----*/
-
 .container {
   /* background-color: rgb(240, 247, 149); */
   flex-grow: 1;

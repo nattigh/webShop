@@ -14,7 +14,8 @@ const Product = ({ item, CURRENCY }) => (
 
 function Products({ CURRENCY }) {
   let { sex } = useParams();
-  sex === "mens" ? (sex = "M") : (sex = "W");
+  let { category } = useParams();
+  sex === "mens" ? (sex = "M") : sex === "womens" ? (sex = "W") : (sex = "");
 
   const { data: productList, error, loading } = useFetch(
     "http://localhost:3001/stock"
@@ -22,9 +23,18 @@ function Products({ CURRENCY }) {
   if (loading) return <h1>Loading...</h1>;
   if (error) return <h1>Something went wrong</h1>;
 
-  const filtedProducts = sex
-    ? productList.filter((p) => p.sex === sex)
-    : productList;
+  let filtedProducts = [];
+  if (!sex) {
+    filtedProducts = [...productList];
+  } else {
+    if (category !== "all") {
+      filtedProducts = productList.filter(
+        (p) => p.sex === sex && p.category === category
+      );
+    } else {
+      filtedProducts = productList.filter((p) => p.sex === sex);
+    }
+  }
 
   return (
     <section className="products">
