@@ -6,7 +6,12 @@
       "colour": "Navy",
       "category": "Tops",
       "sex": "M",
-      "sizeStock": { "S": 0, "M": 25, "L": 23, "XL": 18 },
+      "sizeStock": {
+        "S": 0,
+        "M": 24,
+        "L": 26,
+        "XL": 26
+      },
       "image": "/pictures/Navytopmen.jpg",
       "price": 25,
       "description": "Most men cycle through a simple yet dependable wardrobe full of t-shirts, button-downs, sweaters, suits, and outerwear. But there is one key item that you may be missing and, once you have it, you’ll wonder how you went so long without it."
@@ -17,9 +22,14 @@
       "colour": "Black",
       "category": "Tops",
       "sex": "M",
-      "sizeStock": { "S": 24, "M": 37, "L": 43, "XL": 0 },
+      "sizeStock": {
+        "S": 22,
+        "M": 35,
+        "L": 5,
+        "XL": 0
+      },
       "image": "/pictures/Blacktopmen.jpg",
-      "price": 23,
+      "price": 25,
       "description": "Blank black long sleeve men shirt,comfortable fit,good workmanship from strictly controlled productionline."
     },
     {
@@ -28,7 +38,12 @@
       "colour": "Burgundy",
       "category": "Tops",
       "sex": "W",
-      "sizeStock": { "XS": 23, "S": 0, "M": 35, "L": 21 },
+      "sizeStock": {
+        "XS": 23,
+        "S": 0,
+        "M": 35,
+        "L": 21
+      },
       "image": "/pictures/Burgundytopwomen.jpg",
       "price": 29.99,
       "description": "The must-have long sleeve tee receives a refined update with a luxuriously soft poly-viscose blend that is designed to drape perfectly and accentuate a woman's figure as well as 2x1 ribbed knit long sleeves that flatter the arms in all the right places."
@@ -39,7 +54,12 @@
       "colour": "Khaki",
       "category": "Tops",
       "sex": "W",
-      "sizeStock": { "XS": 0, "S": 0, "M": 20, "L": 11 },
+      "sizeStock": {
+        "XS": 0,
+        "S": 0,
+        "M": 20,
+        "L": 11
+      },
       "image": "/pictures/Khakitopwomen.jpg",
       "price": 33,
       "description": "This crazy-soft tee is made from yarn that is spun, knit, fabric dyed and finished in the USA. Cut and sewn ethically."
@@ -50,7 +70,12 @@
       "colour": "Black",
       "category": "Trousers",
       "sex": "M",
-      "sizeStock": { "30": 15, "32": 23, "34": 24, "36": 16 },
+      "sizeStock": {
+        "30": 13,
+        "32": 21,
+        "34": 24,
+        "36": 16
+      },
       "image": "/pictures/Blacktrousermen.jpg",
       "price": 30,
       "description": "Get noticed for all the right reasons wearing these Black formal trousers For Men from the house of Haoser. Made from poly Cotton, these formal pant for men blue are quite comfortable to wear. Featuring slim fit, these trousers will be best teamed with an off-white shirt and formal shoes."
@@ -61,7 +86,12 @@
       "colour": "Grey",
       "category": "Trousers",
       "sex": "M",
-      "sizeStock": { "30": 13, "32": 19, "34": 20, "36": 13 },
+      "sizeStock": {
+        "30": 13,
+        "32": 19,
+        "34": 20,
+        "36": 13
+      },
       "image": "/pictures/Blacktrousergrey.jpg",
       "price": 35,
       "description": "Get noticed for all the right reasons wearing these Black formal trousers For Men from the house of Haoser. Made from poly Cotton, these formal pant for men blue are quite comfortable to wear. Featuring slim fit, these trousers will be best teamed with an off-white shirt and formal shoes."
@@ -72,7 +102,12 @@
       "colour": "Navy",
       "category": "Trousers",
       "sex": "W",
-      "sizeStock": { "28": 14, "30": 22, "32": 21, "34": 12 },
+      "sizeStock": {
+        "28": 14,
+        "30": 22,
+        "32": 21,
+        "34": 12
+      },
       "image": "/pictures/Navytrouserwomen.jpg",
       "price": 35,
       "description": "The Smith Trousers are crafted in 100% superfine Merino wool woven in Yorkshire by Joseph H Clissold. British cloth is recognised around the world as the finest available and this firm has been producing cloth for over a 100 years."
@@ -83,7 +118,12 @@
       "colour": "Black",
       "category": "Shoes",
       "sex": "M",
-      "sizeStock": { "30": 13, "32": 19, "34": 20, "36": 13 },
+      "sizeStock": {
+        "30": 13,
+        "32": 19,
+        "34": 20,
+        "36": 13
+      },
       "image": "/pictures/Blackshoemen.jpg",
       "price": 100,
       "description": "Fashion is where you find it. Shoes Bank found it surrounded in comfort, dedicated to style and walking in the legacy of quality craftsmanship."
@@ -94,7 +134,12 @@
       "colour": "Brown",
       "category": "Shoes",
       "sex": "M",
-      "sizeStock": { "30": 15, "32": 21, "34": 30, "36": 12 },
+      "sizeStock": {
+        "30": 15,
+        "32": 21,
+        "34": 30,
+        "36": 12
+      },
       "image": "/pictures/Brownshoemen.jpg",
       "price": 85,
       "description": "Brown shoe for men. Leather upper with laces. 70% EVA and 30% rubber outsole. Our Smith boasts a classic design with a relaxed feel and high flexibility."
@@ -105,10 +150,108 @@
       "colour": "Navy",
       "category": "Dresses",
       "sex": "W",
-      "sizeStock": { "XS": 4, "S": 11, "M": 10, "L": 7 },
+      "sizeStock": {
+        "XS": 4,
+        "S": 11,
+        "M": 10,
+        "L": 7
+      },
       "image": "/pictures/Navydresswomen.jpg",
       "price": 140,
       "description": "A simple and classic dress the Ivy is perfect for bridesmaids, date night or going to church! Dress it up or down with your accessories and shoes! Ivy Modest Dress in Navy Blue"
+    }
+  ],
+  "shipping": [
+    {
+      "firstName": "Attila",
+      "lastName": "Nagy",
+      "email": "n_atti11@yahoo.com",
+      "country": "Czech Republic",
+      "city": "Belotin",
+      "address": "Petru Dobra nr 10, ap 10",
+      "trackingNumber": 567274372,
+      "estimatedArrival": "2021/04/22",
+      "id": 1
+    },
+    {
+      "0": {
+        "id": "1",
+        "size": "L",
+        "quantity": 1
+      },
+      "firstName": "Attila",
+      "lastName": "Nagy",
+      "email": "n_atti11@yahoo.com",
+      "country": "Albania",
+      "city": "Petran",
+      "address": "Petru Dobra nr 10, ap 10",
+      "trackingNumber": 9587159899,
+      "estimatedArrival": "2021/04/23",
+      "id": 2
+    },
+    {
+      "firstName": "Attila",
+      "lastName": "Nagy",
+      "email": "n_atti11@yahoo.com",
+      "country": "Albania",
+      "city": "Petran",
+      "address": "Petru Dobra nr 10, ap 10",
+      "bag": {
+        "0": {
+          "id": "1",
+          "size": "M",
+          "quantity": 1
+        },
+        "1": {
+          "id": "1",
+          "size": "L",
+          "quantity": 1
+        },
+        "2": {
+          "id": "1",
+          "size": "XL",
+          "quantity": 2
+        }
+      },
+      "trackingNumber": 2864080615,
+      "estimatedArrival": "2021/04/23",
+      "id": 3
+    },
+    {
+      "firstName": "Attila",
+      "lastName": "Nagy",
+      "email": "n_atti11@yahoo.com",
+      "country": "Bosnia and Herzegovina",
+      "city": "Petran",
+      "address": "Petru Dobra nr 10, ap 10",
+      "bag": {
+        "0": {
+          "id": "1",
+          "size": "M",
+          "quantity": 1
+        }
+      },
+      "trackingNumber": 3885063164,
+      "estimatedArrival": "2021/04/23",
+      "id": 4
+    },
+    {
+      "firstName": "Attila",
+      "lastName": "Nagy",
+      "email": "n_atti11@yahoo.com",
+      "country": "Albania",
+      "city": "Elbasan",
+      "address": "Petru Dobra nr 10, ap 10",
+      "bag": {
+        "0": {
+          "id": "1",
+          "size": "M",
+          "quantity": 1
+        }
+      },
+      "trackingNumber": 8748503680,
+      "estimatedArrival": "2021/04/23",
+      "id": 5
     }
   ]
 }

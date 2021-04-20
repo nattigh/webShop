@@ -10,8 +10,8 @@ import Header from "./components/Header";
 import Payment from "./components/Payment";
 import ProductDetail from "./components/ProductDetail";
 import Products from "./components/Products";
+import ShippingInfo from "./components/ShippingInfo";
 import ShoppingBag from "./components/ShoppingBag";
-
 function App() {
   const CURRENCY = "€";
   const [bag, setBag] = useState(
@@ -151,10 +151,15 @@ function App() {
             element={
               <Payment
                 bag={bag}
+                update={updateQuantity}
                 shippingDetails={shippingDetails}
                 CURRENCY={CURRENCY}
               />
             }
+          />
+          <Route
+            path="/shippingInfo/:trackingNumber"
+            element={<ShippingInfo />}
           />
         </Routes>
       </div>
