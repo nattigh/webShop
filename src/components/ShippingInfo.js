@@ -19,7 +19,12 @@ function ShippingInfo() {
     <>
       <p>Thanks for shopping with us</p>
       <p>Order tracking number: {trackingNumber}</p>
-      <p>Estimated delivery date: {order[0].estimatedArrival}</p>
+      <p>
+        Estimated delivery date:{" "}
+        {
+          //order.estimatedArrival
+        }
+      </p>
     </>
   );
 }

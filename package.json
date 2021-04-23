@@ -6,8 +6,11 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "faker": "^5.5.3",
     "formik": "^2.2.6",
+    "nodemailer": "^6.5.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^6.0.0-beta.0",
@@ -17,8 +20,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "node": "sendEmail.js",
     "json-server": "json-server --watch db.json --port 3001",
-    "dev": "concurrently \"npm start\" \"npm run json-server\"",
+    "dev": "concurrently \"npm start\" \"npm run json-server\" \"node sendEmail.js\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

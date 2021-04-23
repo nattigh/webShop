@@ -8,9 +8,9 @@
       "sex": "M",
       "sizeStock": {
         "S": 0,
-        "M": 24,
-        "L": 26,
-        "XL": 26
+        "M": 47,
+        "L": 59,
+        "XL": 55
       },
       "image": "/pictures/Navytopmen.jpg",
       "price": 25,
@@ -23,10 +23,10 @@
       "category": "Tops",
       "sex": "M",
       "sizeStock": {
-        "S": 22,
-        "M": 35,
-        "L": 5,
-        "XL": 0
+        "S": 60,
+        "M": 74,
+        "L": 61,
+        "XL": 55
       },
       "image": "/pictures/Blacktopmen.jpg",
       "price": 25,
@@ -39,10 +39,10 @@
       "category": "Tops",
       "sex": "W",
       "sizeStock": {
-        "XS": 23,
-        "S": 0,
-        "M": 35,
-        "L": 21
+        "XS": 77,
+        "S": 89,
+        "M": 90,
+        "L": 88
       },
       "image": "/pictures/Burgundytopwomen.jpg",
       "price": 29.99,
@@ -57,7 +57,7 @@
       "sizeStock": {
         "XS": 0,
         "S": 0,
-        "M": 20,
+        "M": 18,
         "L": 11
       },
       "image": "/pictures/Khakitopwomen.jpg",
@@ -71,10 +71,10 @@
       "category": "Trousers",
       "sex": "M",
       "sizeStock": {
-        "30": 13,
-        "32": 21,
-        "34": 24,
-        "36": 16
+        "30": 98,
+        "32": 113,
+        "34": 113,
+        "36": 100
       },
       "image": "/pictures/Blacktrousermen.jpg",
       "price": 30,
@@ -87,10 +87,10 @@
       "category": "Trousers",
       "sex": "M",
       "sizeStock": {
-        "30": 13,
-        "32": 19,
-        "34": 20,
-        "36": 13
+        "30": 82,
+        "32": 93,
+        "34": 99,
+        "36": 89
       },
       "image": "/pictures/Blacktrousergrey.jpg",
       "price": 35,
@@ -103,10 +103,10 @@
       "category": "Trousers",
       "sex": "W",
       "sizeStock": {
-        "28": 14,
-        "30": 22,
-        "32": 21,
-        "34": 12
+        "28": 60,
+        "30": 66,
+        "32": 62,
+        "34": 59
       },
       "image": "/pictures/Navytrouserwomen.jpg",
       "price": 35,
@@ -119,10 +119,10 @@
       "category": "Shoes",
       "sex": "M",
       "sizeStock": {
-        "30": 13,
-        "32": 19,
-        "34": 20,
-        "36": 13
+        "30": 45,
+        "32": 53,
+        "34": 59,
+        "36": 55
       },
       "image": "/pictures/Blackshoemen.jpg",
       "price": 100,
@@ -135,10 +135,10 @@
       "category": "Shoes",
       "sex": "M",
       "sizeStock": {
-        "30": 15,
-        "32": 21,
-        "34": 30,
-        "36": 12
+        "30": 44,
+        "32": 47,
+        "34": 46,
+        "36": 44
       },
       "image": "/pictures/Brownshoemen.jpg",
       "price": 85,
@@ -151,10 +151,10 @@
       "category": "Dresses",
       "sex": "W",
       "sizeStock": {
-        "XS": 4,
-        "S": 11,
-        "M": 10,
-        "L": 7
+        "XS": 84,
+        "S": 88,
+        "M": 93,
+        "L": 77
       },
       "image": "/pictures/Navydresswomen.jpg",
       "price": 140,
@@ -162,79 +162,6 @@
     }
   ],
   "shipping": [
-    {
-      "firstName": "Attila",
-      "lastName": "Nagy",
-      "email": "n_atti11@yahoo.com",
-      "country": "Czech Republic",
-      "city": "Belotin",
-      "address": "Petru Dobra nr 10, ap 10",
-      "trackingNumber": 567274372,
-      "estimatedArrival": "2021/04/22",
-      "id": 1
-    },
-    {
-      "0": {
-        "id": "1",
-        "size": "L",
-        "quantity": 1
-      },
-      "firstName": "Attila",
-      "lastName": "Nagy",
-      "email": "n_atti11@yahoo.com",
-      "country": "Albania",
-      "city": "Petran",
-      "address": "Petru Dobra nr 10, ap 10",
-      "trackingNumber": 9587159899,
-      "estimatedArrival": "2021/04/23",
-      "id": 2
-    },
-    {
-      "firstName": "Attila",
-      "lastName": "Nagy",
-      "email": "n_atti11@yahoo.com",
-      "country": "Albania",
-      "city": "Petran",
-      "address": "Petru Dobra nr 10, ap 10",
-      "bag": {
-        "0": {
-          "id": "1",
-          "size": "M",
-          "quantity": 1
-        },
-        "1": {
-          "id": "1",
-          "size": "L",
-          "quantity": 1
-        },
-        "2": {
-          "id": "1",
-          "size": "XL",
-          "quantity": 2
-        }
-      },
-      "trackingNumber": 2864080615,
-      "estimatedArrival": "2021/04/23",
-      "id": 3
-    },
-    {
-      "firstName": "Attila",
-      "lastName": "Nagy",
-      "email": "n_atti11@yahoo.com",
-      "country": "Bosnia and Herzegovina",
-      "city": "Petran",
-      "address": "Petru Dobra nr 10, ap 10",
-      "bag": {
-        "0": {
-          "id": "1",
-          "size": "M",
-          "quantity": 1
-        }
-      },
-      "trackingNumber": 3885063164,
-      "estimatedArrival": "2021/04/23",
-      "id": 4
-    },
     {
       "firstName": "Attila",
       "lastName": "Nagy",
@@ -251,7 +178,30 @@
       },
       "trackingNumber": 8748503680,
       "estimatedArrival": "2021/04/23",
-      "id": 5
+      "id": 1
+    },
+    {
+      "firstName": "Peter",
+      "lastName": "Szabo",
+      "email": "n_atti11@yahoo.com",
+      "country": "Hungary",
+      "city": "Budapest",
+      "address": "Petru Dobra nr 10, ap 10",
+      "bag": {
+        "0": {
+          "id": "3",
+          "size": "S",
+          "quantity": 2
+        },
+        "1": {
+          "id": "8",
+          "size": "34",
+          "quantity": 2
+        }
+      },
+      "trackingNumber": 7858769622,
+      "estimatedArrival": "2021/04/26",
+      "id": 2
     }
   ]
 }

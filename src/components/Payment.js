@@ -43,6 +43,16 @@ const Payment = ({ bag, shippingDetails, CURRENCY, update }) => {
       });
       patchData(`http://localhost:3001/stock/${bagItem.id}`, newSizeStock);
     });
+
+    //email:
+    /*----- */
+    postData("http://localhost:3002/sendMail", {
+      ...details,
+      bag: { ...bag },
+      trackingNumber,
+      estimatedArrival,
+    });
+    /*----- */
     navigate(`/shippingInfo/${trackingNumber}`);
   };
 
