@@ -22,6 +22,8 @@ const Payment = ({ bag, shippingDetails, CURRENCY, update }) => {
       bag: { ...bag },
       trackingNumber,
       estimatedArrival,
+    }).then((data) => {
+      console.log("Payment->data: ", data); // JSON data parsed by `data.json()` call
     });
 
     //update quantity
@@ -41,6 +43,7 @@ const Payment = ({ bag, shippingDetails, CURRENCY, update }) => {
           update(bagItem2.id, bagItem2.size, 0);
         }
       });
+      //update stock after purchase
       patchData(`http://localhost:3001/stock/${bagItem.id}`, newSizeStock);
     });
 
